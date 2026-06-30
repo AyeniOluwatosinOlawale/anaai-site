@@ -104,20 +104,6 @@ export default function HeroSection() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#2563EB]/25 bg-[#2563EB]/8 text-[#60A5FA] text-sm font-medium mb-10 backdrop-blur-sm"
-        >
-          <span className="relative flex w-2 h-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]" />
-          </span>
-          Open to new projects · 2026
-        </motion.div>
-
         {/* Headline — line by line reveal */}
         <h1 className="font-extrabold tracking-tight leading-[1.08] mb-3">
           <span className="block text-6xl sm:text-7xl md:text-8xl overflow-hidden">
