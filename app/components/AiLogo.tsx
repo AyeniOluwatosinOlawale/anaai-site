@@ -1,0 +1,29 @@
+export default function AiLogo({ size = 32 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="32" height="32" rx="7" fill="#030712" />
+      {/* Glow halos */}
+      <circle cx="16" cy="8" r="6" fill="#F59E0B" opacity="0.18" />
+      <circle cx="9" cy="23" r="5" fill="#2563EB" opacity="0.22" />
+      <circle cx="23" cy="23" r="5" fill="#2563EB" opacity="0.22" />
+      {/* A-frame lines */}
+      <line x1="16" y1="8" x2="9" y2="23" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" opacity="0.7" />
+      <line x1="16" y1="8" x2="23" y2="23" stroke="#3B82F6" strokeWidth="1.6" strokeLinecap="round" opacity="0.7" />
+      {/* Crossbar */}
+      <line x1="11.5" y1="18" x2="20.5" y2="18" stroke="#60A5FA" strokeWidth="1.4" strokeLinecap="round" opacity="0.55" />
+      {/* Crossbar nodes */}
+      <circle cx="11.5" cy="18" r="1.4" fill="#60A5FA" opacity="0.9" />
+      <circle cx="20.5" cy="18" r="1.4" fill="#60A5FA" opacity="0.9" />
+      {/* Main nodes */}
+      <circle cx="16" cy="8" r="2.8" fill="#F59E0B" />
+      <circle cx="9" cy="23" r="2.6" fill="#2563EB" />
+      <circle cx="23" cy="23" r="2.6" fill="#2563EB" />
+    </svg>
+  );
+}

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import AiLogo from "./AiLogo";
 
 const CALENDLY = "https://calendly.com/app/intro/team";
 const links = ["Services", "Process", "Testimonials", "Contact"];
@@ -29,9 +30,7 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E3A5F] flex items-center justify-center text-sm font-bold shadow-lg shadow-blue-900/40">
-              A
-            </div>
+            <AiLogo size={32} />
             <span className="font-bold text-white tracking-tight group-hover:text-[#60A5FA] transition-colors duration-200">
               Aanai.consult
             </span>

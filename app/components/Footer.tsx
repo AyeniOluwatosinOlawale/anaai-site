@@ -1,4 +1,5 @@
 "use client";
+import AiLogo from "./AiLogo";
 
 const social = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/oluwatosinolawaleayeni/" },
@@ -11,9 +12,7 @@ export default function Footer() {
     <footer className="border-t border-white/[0.04] py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1E3A5F] flex items-center justify-center text-xs font-bold">
-            A
-          </div>
+          <AiLogo size={28} />
           <span className="text-slate-600 text-sm font-medium">Aanai.consult</span>
         </div>
 
