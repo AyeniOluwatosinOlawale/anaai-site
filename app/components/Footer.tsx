@@ -11,10 +11,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.04] py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2.5">
+        <a href="https://anaai.tech/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 group">
           <AiLogo size={28} />
-          <span className="text-slate-600 text-sm font-medium">Anaai.consult</span>
-        </div>
+          <span className="text-slate-600 text-sm font-medium group-hover:text-[#60A5FA] transition-colors duration-200">Anaai.consult</span>
+        </a>
 
         <p className="text-slate-500 text-xs">
           &copy; {new Date().getFullYear()} Oluwatosin Ayeni · All rights reserved.

@@ -29,7 +29,7 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2.5 group">
+          <a href="https://anaai.tech/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 group">
             <AiLogo size={32} />
             <span className="font-bold text-white tracking-tight group-hover:text-[#60A5FA] transition-colors duration-200">
               Anaai.consult
