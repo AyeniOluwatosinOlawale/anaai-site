@@ -1,6 +1,7 @@
 "use client";
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useCallback } from "react";
+import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion";
+import { useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 
 const CALENDLY = "https://calendly.com/app/intro/team";
 
@@ -12,10 +13,16 @@ const floatingBadges = [
 ];
 
 export default function HeroSection() {
+  const sectionRef = useRef<HTMLElement>(null);
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
   const springX = useSpring(cursorX, { stiffness: 50, damping: 20 });
   const springY = useSpring(cursorY, { stiffness: 50, damping: 20 });
+
+  // Parallax on scroll
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
@@ -31,19 +38,43 @@ export default function HeroSection() {
   }, [handleMouseMove]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      {/* AI-generated background image with parallax */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ y: bgY, scale: bgScale }}
+      >
+        <Image
+          src="/ai/hero-bg.png"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          style={{ objectPosition: "center" }}
+        />
+        {/* Dark overlay — keep text readable */}
+        <div className="absolute inset-0 bg-[#030712]/70" />
+        {/* Vignette */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, #030712 100%)",
+          }}
+        />
+      </motion.div>
+
       {/* Mouse gradient follower */}
       <motion.div
-        className="pointer-events-none fixed inset-0 z-0 hidden lg:block"
+        className="pointer-events-none fixed inset-0 z-[1] hidden lg:block"
         style={{
-          background: `radial-gradient(700px circle at ${springX}px ${springY}px, rgba(37,99,235,0.07), transparent 60%)`,
+          background: `radial-gradient(700px circle at ${springX}px ${springY}px, rgba(37,99,235,0.09), transparent 60%)`,
         }}
       />
 
-      {/* Animated background blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Animated overlay blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
         <div
-          className="absolute w-[700px] h-[700px] rounded-full opacity-[0.18] blur-[110px]"
+          className="absolute w-[700px] h-[700px] rounded-full opacity-[0.12] blur-[110px]"
           style={{
             background: "radial-gradient(circle, #1E3A5F, #2563EB)",
             top: "5%",
@@ -52,7 +83,7 @@ export default function HeroSection() {
           }}
         />
         <div
-          className="absolute w-[500px] h-[500px] rounded-full opacity-[0.12] blur-[130px]"
+          className="absolute w-[500px] h-[500px] rounded-full opacity-[0.08] blur-[130px]"
           style={{
             background: "radial-gradient(circle, #F59E0B, #92400E)",
             top: "45%",
@@ -73,7 +104,7 @@ export default function HeroSection() {
 
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.022] pointer-events-none"
+        className="absolute inset-0 opacity-[0.018] pointer-events-none z-[2]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
@@ -88,7 +119,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.2 + b.delay, duration: 0.5 }}
-          className="absolute hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm text-xs text-slate-500 font-medium select-none cursor-default"
+          className="absolute hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/15 bg-white/[0.07] backdrop-blur-md text-xs text-slate-300 font-medium select-none cursor-default z-[3]"
           style={{
             left: b.x,
             top: b.y,

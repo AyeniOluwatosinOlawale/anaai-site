@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView, useMotionValue, useMotionTemplate } from "framer-motion";
 import { useRef, useCallback } from "react";
+import Image from "next/image";
 
 const CALENDLY = "https://calendly.com/app/intro/team";
 
@@ -18,6 +19,7 @@ const services = [
     tags: ["AI Audit", "Roadmap", "Strategy Deck"],
     color: "#2563EB",
     glow: "rgba(37,99,235,0.18)",
+    image: "/ai/service-strategy.png",
   },
   {
     num: "02",
@@ -32,6 +34,7 @@ const services = [
     tags: ["n8n Workflows", "LLM Pipelines", "CRM Integration"],
     color: "#F59E0B",
     glow: "rgba(245,158,11,0.18)",
+    image: "/ai/service-automation.png",
   },
   {
     num: "03",
@@ -46,6 +49,7 @@ const services = [
     tags: ["Supabase", "Dashboards", "Predictive Models"],
     color: "#10B981",
     glow: "rgba(16,185,129,0.18)",
+    image: "/ai/service-data.png",
   },
   {
     num: "04",
@@ -60,6 +64,7 @@ const services = [
     tags: ["MVP Build", "Full-Stack", "Production Deploy"],
     color: "#8B5CF6",
     glow: "rgba(139,92,246,0.18)",
+    image: "/ai/service-product.png",
   },
 ];
 
@@ -89,8 +94,26 @@ function SpotlightCard({ service, index }: { service: (typeof services)[0]; inde
     >
       <div
         onMouseMove={handleMouseMove}
-        className="relative group rounded-2xl border border-white/[0.07] bg-[#0a1628] p-8 h-full overflow-hidden cursor-default transition-all duration-300 hover:border-white/[0.13]"
+        className="relative group rounded-2xl border border-white/[0.07] bg-[#0a1628] p-8 h-full overflow-hidden cursor-default transition-all duration-300 hover:border-white/[0.18]"
       >
+        {/* AI-generated background image — visible on hover */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <Image
+            src={service.image}
+            alt=""
+            fill
+            className="object-cover"
+            style={{ objectPosition: "center" }}
+          />
+          <div className="absolute inset-0 bg-[#0a1628]/80" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(135deg, ${service.color}18 0%, transparent 60%)`,
+            }}
+          />
+        </div>
+
         {/* Spotlight glow */}
         <motion.div
           className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
@@ -99,9 +122,9 @@ function SpotlightCard({ service, index }: { service: (typeof services)[0]; inde
 
         {/* Top accent line */}
         <div
-          className="absolute top-0 left-8 right-8 h-px opacity-50"
+          className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
-            background: `linear-gradient(90deg, transparent, ${service.color}70, transparent)`,
+            background: `linear-gradient(90deg, transparent, ${service.color}80, transparent)`,
           }}
         />
 
