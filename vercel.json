@@ -1,3 +1,5 @@
 {
-  "toolbar": false
+  "env": {
+    "VERCEL_TOOLBAR_DISABLED": "1"
+  }
 }
