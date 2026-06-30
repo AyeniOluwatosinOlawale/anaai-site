@@ -175,8 +175,29 @@ export default function ServicesSection() {
   const inView = useInView(headRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="services" className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="py-32 px-6 relative overflow-hidden">
+      {/* Ambient light — breathes behind cards */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div
+          className="absolute w-[700px] h-[700px] rounded-full blur-[160px]"
+          style={{
+            background: "radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%)",
+            top: "20%",
+            right: "-10%",
+            animation: "breathe 15s ease-in-out infinite 2s",
+          }}
+        />
+        <div
+          className="absolute w-[500px] h-[500px] rounded-full blur-[130px]"
+          style={{
+            background: "radial-gradient(circle, rgba(139,92,246,0.10), transparent 70%)",
+            bottom: "10%",
+            left: "-5%",
+            animation: "aurora 20s ease-in-out infinite 8s",
+          }}
+        />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           ref={headRef}
           initial={{ opacity: 0, y: 30 }}

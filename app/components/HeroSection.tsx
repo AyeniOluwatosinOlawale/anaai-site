@@ -71,33 +71,44 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Animated overlay blobs */}
+      {/* Animated ambient light layers */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+        {/* Primary blue aurora — slow drift + breathe */}
         <div
-          className="absolute w-[700px] h-[700px] rounded-full opacity-[0.12] blur-[110px]"
+          className="absolute w-[900px] h-[900px] rounded-full blur-[140px]"
           style={{
-            background: "radial-gradient(circle, #1E3A5F, #2563EB)",
-            top: "5%",
-            left: "-15%",
-            animation: "blob 13s ease-in-out infinite",
+            background: "radial-gradient(circle at 40% 40%, #2563EB, #1E3A5F 55%, transparent 80%)",
+            top: "-10%",
+            left: "-20%",
+            animation: "aurora 18s ease-in-out infinite",
           }}
         />
+        {/* Gold accent — breathes independently */}
         <div
-          className="absolute w-[500px] h-[500px] rounded-full opacity-[0.08] blur-[130px]"
+          className="absolute w-[600px] h-[600px] rounded-full blur-[120px]"
           style={{
-            background: "radial-gradient(circle, #F59E0B, #92400E)",
-            top: "45%",
-            right: "-8%",
-            animation: "blob 16s ease-in-out infinite 4s",
+            background: "radial-gradient(circle, #F59E0B 0%, #92400E 50%, transparent 80%)",
+            top: "40%",
+            right: "-10%",
+            animation: "breathe 12s ease-in-out infinite 3s",
           }}
         />
+        {/* Violet accent — mid-page glow */}
         <div
-          className="absolute w-[350px] h-[350px] rounded-full opacity-[0.1] blur-[90px]"
+          className="absolute w-[450px] h-[450px] rounded-full blur-[100px]"
           style={{
-            background: "radial-gradient(circle, #7C3AED, #2563EB)",
-            bottom: "8%",
-            left: "35%",
-            animation: "blob 11s ease-in-out infinite 7s",
+            background: "radial-gradient(circle, #7C3AED, #2563EB 60%, transparent)",
+            bottom: "5%",
+            left: "30%",
+            animation: "aurora 14s ease-in-out infinite 6s",
+          }}
+        />
+        {/* Sweeping conic light strip */}
+        <div
+          className="absolute w-[200%] h-[200%] -left-1/2 -top-1/2 pointer-events-none"
+          style={{
+            background: "conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(37,99,235,0.06) 40deg, transparent 80deg, transparent 360deg)",
+            animation: "light-sweep 28s linear infinite",
           }}
         />
       </div>

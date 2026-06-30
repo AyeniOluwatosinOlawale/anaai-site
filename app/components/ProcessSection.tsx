@@ -35,11 +35,24 @@ export default function ProcessSection() {
 
   return (
     <section id="process" className="py-32 px-6 relative overflow-hidden">
+      {/* Ambient sweep */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute w-[800px] h-[800px] rounded-full blur-[150px] pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 80% 40% at 50% 50%, rgba(37,99,235,0.06), transparent)",
+          background: "radial-gradient(circle, rgba(245,158,11,0.09), transparent 70%)",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          animation: "breathe 17s ease-in-out infinite 1s",
+        }}
+      />
+      <div
+        className="absolute w-[500px] h-[500px] rounded-full blur-[120px] pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(37,99,235,0.10), transparent 70%)",
+          top: "-10%",
+          right: "10%",
+          animation: "aurora 22s ease-in-out infinite 5s",
         }}
       />
 

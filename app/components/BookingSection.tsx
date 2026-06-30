@@ -10,12 +10,24 @@ export default function BookingSection() {
 
   return (
     <section id="contact" className="py-32 px-6 relative overflow-hidden">
-      {/* Background radial */}
+      {/* Animated ambient light */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute w-[900px] h-[900px] rounded-full blur-[160px] pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 60% at 50% 110%, rgba(37,99,235,0.2), transparent 70%)",
+          background: "radial-gradient(circle, rgba(37,99,235,0.18), transparent 65%)",
+          bottom: "-20%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          animation: "breathe 14s ease-in-out infinite",
+        }}
+      />
+      <div
+        className="absolute w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(245,158,11,0.12), transparent 70%)",
+          top: "10%",
+          right: "5%",
+          animation: "aurora 19s ease-in-out infinite 4s",
         }}
       />
 
