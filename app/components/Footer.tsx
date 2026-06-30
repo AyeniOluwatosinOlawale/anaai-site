@@ -2,7 +2,7 @@
 
 const social = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/oluwatosinolawaleayeni/" },
-  { label: "Twitter", href: "https://twitter.com" },
+  { label: "Twitter", href: "https://x.com/anabury25" },
   { label: "GitHub", href: "https://github.com/AyeniOluwatosinOlawale" },
 ];
 
