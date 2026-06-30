@@ -33,7 +33,7 @@ export default function Navbar() {
               A
             </div>
             <span className="font-bold text-white tracking-tight group-hover:text-[#60A5FA] transition-colors duration-200">
-              Anaai.tech
+              Aanai.consult
             </span>
           </a>
 

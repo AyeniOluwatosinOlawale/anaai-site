@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1E3A5F] flex items-center justify-center text-xs font-bold">
             A
           </div>
-          <span className="text-slate-600 text-sm font-medium">Anaai.tech</span>
+          <span className="text-slate-600 text-sm font-medium">Aanai.consult</span>
         </div>
 
         <p className="text-slate-500 text-xs">
