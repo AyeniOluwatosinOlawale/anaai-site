@@ -1,7 +1,7 @@
 "use client";
 
 const social = [
-  { label: "LinkedIn", href: "https://linkedin.com/in/oluwatosin-ayeni" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/oluwatosinolawaleayeni/" },
   { label: "Twitter", href: "https://twitter.com" },
   { label: "GitHub", href: "https://github.com/AyeniOluwatosinOlawale" },
 ];
