@@ -32,7 +32,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center gap-2.5 group">
             <AiLogo size={32} />
             <span className="font-bold text-white tracking-tight group-hover:text-[#60A5FA] transition-colors duration-200">
-              Aanai.consult
+              Anaai.consult
             </span>
           </a>
 

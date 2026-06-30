@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2.5">
           <AiLogo size={28} />
-          <span className="text-slate-600 text-sm font-medium">Aanai.consult</span>
+          <span className="text-slate-600 text-sm font-medium">Anaai.consult</span>
         </div>
 
         <p className="text-slate-500 text-xs">
