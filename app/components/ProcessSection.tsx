@@ -51,21 +51,9 @@ export default function ProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-[#F59E0B] text-sm font-semibold tracking-widest uppercase mb-3 block">
-            How It Works
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ textWrap: "balance" } as React.CSSProperties}>
             From Idea to{" "}
-            <span
-              style={{
-                backgroundImage: "linear-gradient(135deg, #FCD34D, #F59E0B)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Impact
-            </span>
+            <span style={{ color: "#F59E0B" }}>Impact</span>
           </h2>
         </motion.div>
 
@@ -114,7 +102,7 @@ export default function ProcessSection() {
               </div>
 
               <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed max-w-xs mx-auto">
+              <p className="text-slate-400 text-sm leading-relaxed max-w-xs mx-auto">
                 {step.description}
               </p>
             </motion.div>

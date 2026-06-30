@@ -48,23 +48,12 @@ export default function BookingSection() {
           </div>
 
           {/* Headline */}
-          <h2 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.05] mb-6">
-            Ready to Build
-            <br />
-            <span
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #FCD34D 0%, #F59E0B 50%, #D97706 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Something Intelligent?
-            </span>
+          <h2 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.05] mb-6" style={{ textWrap: "balance" } as React.CSSProperties}>
+            Ready to Build{" "}
+            <span style={{ color: "#F59E0B" }}>Something Intelligent?</span>
           </h2>
 
-          <p className="text-slate-500 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+          <p className="text-slate-400 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
             Let&apos;s spend 30 minutes mapping exactly how AI can transform your business. No
             commitment. No sales pitch. Just clarity.
           </p>
@@ -118,13 +107,13 @@ export default function BookingSection() {
 
           <div className="flex items-center gap-4 mt-8 mb-4 max-w-xs mx-auto">
             <div className="flex-1 h-px bg-white/5" />
-            <span className="text-slate-700 text-xs">or reach out directly</span>
+            <span className="text-slate-500 text-xs">or reach out directly</span>
             <div className="flex-1 h-px bg-white/5" />
           </div>
 
           <a
             href="mailto:hello@anaai.tech"
-            className="text-slate-600 hover:text-[#60A5FA] transition-colors text-sm"
+            className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
           >
             hello@anaai.tech
           </a>

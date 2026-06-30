@@ -17,7 +17,7 @@ export default function Footer() {
           <span className="text-slate-600 text-sm font-medium">Anaai.tech</span>
         </div>
 
-        <p className="text-slate-800 text-xs">
+        <p className="text-slate-500 text-xs">
           &copy; {new Date().getFullYear()} Oluwatosin Ayeni · All rights reserved.
         </p>
 
@@ -28,7 +28,7 @@ export default function Footer() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-700 hover:text-slate-300 text-xs transition-colors duration-200"
+              className="text-slate-400 hover:text-slate-200 text-xs transition-colors duration-200"
             >
               {s.label}
             </a>

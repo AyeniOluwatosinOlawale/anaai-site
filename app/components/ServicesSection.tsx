@@ -128,20 +128,17 @@ function SpotlightCard({ service, index }: { service: (typeof services)[0]; inde
           }}
         />
 
-        <div className="flex items-start justify-between mb-6">
+        <div className="flex items-start mb-6">
           <div
             className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
             style={{ background: `${service.color}15`, color: service.color }}
           >
             {service.icon}
           </div>
-          <span className="text-5xl font-black text-white/[0.04] font-mono select-none">
-            {service.num}
-          </span>
         </div>
 
         <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-        <p className="text-slate-500 text-sm leading-relaxed mb-6">{service.description}</p>
+        <p className="text-slate-400 text-sm leading-relaxed mb-6">{service.description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {service.tags.map((tag) => (
@@ -187,24 +184,12 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-[#2563EB] text-sm font-semibold tracking-widest uppercase mb-3 block">
-            What I Do
-          </span>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-lg" style={{ textWrap: "balance" } as React.CSSProperties}>
               Services Built for{" "}
-              <span
-                style={{
-                  backgroundImage: "linear-gradient(135deg, #FCD34D, #F59E0B)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Real Impact
-              </span>
+              <span style={{ color: "#F59E0B" }}>Real Impact</span>
             </h2>
-            <p className="text-slate-600 text-sm max-w-xs md:text-right leading-relaxed">
+            <p className="text-slate-400 text-sm max-w-xs md:text-right leading-relaxed">
               No fluff — every engagement is scoped for measurable outcomes.
             </p>
           </div>
@@ -221,7 +206,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="text-center text-slate-700 text-sm mt-10"
+          className="text-center text-slate-400 text-sm mt-10"
         >
           Not sure which service fits?{" "}
           <a

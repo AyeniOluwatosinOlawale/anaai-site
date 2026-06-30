@@ -160,17 +160,10 @@ export default function HeroSection() {
         </h1>
 
         {/* Gold name */}
-        <div
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-10 overflow-hidden"
-          style={{
-            backgroundImage: "linear-gradient(135deg, #FCD34D 0%, #F59E0B 50%, #D97706 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
+        <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-10 overflow-hidden">
           <motion.span
             className="block"
+            style={{ color: "#F59E0B" }}
             initial={{ y: "110%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.75, delay: 0.51, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -230,24 +223,15 @@ export default function HeroSection() {
           </a>
         </motion.div>
 
-        {/* Stats row */}
-        <motion.div
+        {/* Trust line */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.8 }}
-          className="flex justify-center gap-12"
+          className="text-slate-500 text-sm tracking-wide"
         >
-          {[
-            { value: "50+", label: "Projects" },
-            { value: "12+", label: "Industries" },
-            { value: "100%", label: "Satisfaction" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="text-3xl font-bold text-white">{s.value}</p>
-              <p className="text-slate-600 text-xs mt-0.5 uppercase tracking-widest">{s.label}</p>
-            </div>
-          ))}
-        </motion.div>
+          Strategy · automation · full-stack AI · across fintech, edtech, and ops
+        </motion.p>
       </div>
 
       {/* Scroll indicator */}
