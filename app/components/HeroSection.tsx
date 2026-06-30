@@ -3,7 +3,7 @@ import { motion, useMotionValue, useSpring, useScroll, useTransform } from "fram
 import { useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 
-const CALENDLY = "https://calendly.com/app/intro/team";
+const CALENDLY = "https://calendly.com/ayenioluwatosinolawale/30min";
 
 const floatingBadges = [
   { label: "n8n Automation", x: "7%", y: "28%", delay: 0, rot: "-6deg", dur: "7s" },

@@ -3,7 +3,7 @@ import { motion, useInView, useMotionValue, useMotionTemplate } from "framer-mot
 import { useRef, useCallback } from "react";
 import Image from "next/image";
 
-const CALENDLY = "https://calendly.com/app/intro/team";
+const CALENDLY = "https://calendly.com/ayenioluwatosinolawale/30min";
 
 const services = [
   {

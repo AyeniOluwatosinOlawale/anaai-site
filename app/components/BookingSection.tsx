@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const CALENDLY = "https://calendly.com/app/intro/team";
+const CALENDLY = "https://calendly.com/ayenioluwatosinolawale/30min";
 
 export default function BookingSection() {
   const ref = useRef<HTMLDivElement>(null);
