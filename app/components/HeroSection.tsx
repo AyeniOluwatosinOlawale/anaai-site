@@ -170,18 +170,6 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        {/* Gold name */}
-        <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-10 overflow-hidden">
-          <motion.span
-            className="block"
-            style={{ color: "#F59E0B" }}
-            initial={{ y: "110%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.75, delay: 0.51, ease: [0.21, 0.47, 0.32, 0.98] }}
-          >
-            — Oluwatosin Ayeni
-          </motion.span>
-        </div>
 
         {/* Tagline */}
         <motion.p
