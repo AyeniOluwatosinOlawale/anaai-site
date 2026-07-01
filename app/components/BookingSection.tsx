@@ -124,10 +124,10 @@ export default function BookingSection() {
           </div>
 
           <a
-            href="mailto:hello@anaai.tech"
+            href="tel:+447727305230"
             className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
           >
-            hello@anaai.tech
+            +44 7727 305230
           </a>
         </motion.div>
       </div>
