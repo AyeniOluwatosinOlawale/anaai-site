@@ -129,6 +129,13 @@ export default function BookingSection() {
           >
             +44 7727 305230
           </a>
+          <span className="text-slate-700 text-xs">·</span>
+          <a
+            href="mailto:ayenioluwatosinolawale@gmail.com"
+            className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
+          >
+            ayenioluwatosinolawale@gmail.com
+          </a>
         </motion.div>
       </div>
     </section>
