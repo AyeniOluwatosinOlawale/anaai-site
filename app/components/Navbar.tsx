@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AiLogo from "./AiLogo";
 
-const CALENDLY = "https://calendly.com/app/intro/team";
+const CALENDLY = "https://calendly.com/ayenioluwatosinolawale/30min";
 const links = ["Services", "Process", "Testimonials", "Contact"];
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
             href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-900/30 hover:shadow-blue-900/50 hover:scale-[1.02]"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-blue-900/30 hover:shadow-blue-900/50 hover:scale-[1.02]"
           >
             Book a Call
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
