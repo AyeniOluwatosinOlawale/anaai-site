@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Oluwatosin Ayeni — AI Strategy & Technology Consultant",
+  title: "Anaai.consult — AI Strategy & Technology Consulting",
   description:
     "Helping businesses design and deploy AI systems that create real competitive advantage — from strategy to production.",
 };
