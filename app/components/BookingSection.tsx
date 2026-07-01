@@ -131,7 +131,9 @@ export default function BookingSection() {
               +44 7727 305230
             </a>
             <a
-              href="mailto:ayenioluwatosinolawale@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=ayenioluwatosinolawale@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#60A5FA] transition-colors text-sm underline underline-offset-4"
             >
               <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
