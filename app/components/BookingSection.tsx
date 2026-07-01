@@ -123,19 +123,20 @@ export default function BookingSection() {
             <div className="flex-1 h-px bg-white/5" />
           </div>
 
-          <a
-            href="tel:+447727305230"
-            className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
-          >
-            +44 7727 305230
-          </a>
-          <span className="text-slate-700 text-xs">·</span>
-          <a
-            href="mailto:ayenioluwatosinolawale@gmail.com"
-            className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
-          >
-            ayenioluwatosinolawale@gmail.com
-          </a>
+          <div className="flex flex-col items-center gap-2">
+            <a
+              href="tel:+447727305230"
+              className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
+            >
+              +44 7727 305230
+            </a>
+            <a
+              href="mailto:ayenioluwatosinolawale@gmail.com"
+              className="text-slate-400 hover:text-[#60A5FA] transition-colors text-sm"
+            >
+              ayenioluwatosinolawale@gmail.com
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
