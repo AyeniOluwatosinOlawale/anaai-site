@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import AiLogo from "./AiLogo";
 
 const social = [
@@ -21,6 +22,8 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-6">
+          <Link href="/privacy" className="text-slate-400 hover:text-slate-200 text-xs transition-colors duration-200">Privacy</Link>
+          <Link href="/terms" className="text-slate-400 hover:text-slate-200 text-xs transition-colors duration-200">Terms</Link>
           {social.map((s) => (
             <a
               key={s.label}
