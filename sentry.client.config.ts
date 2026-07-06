@@ -6,4 +6,11 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0,
   replaysSessionSampleRate: 0.05,
   integrations: [Sentry.replayIntegration()],
+  environment: process.env.NODE_ENV,
+  allowUrls: [
+    /https:\/\/www\.anaai\.tech/,
+    /https:\/\/anaai\.tech/,
+    /https:\/\/www\.anaaiconsult\.co\.uk/,
+    /https:\/\/anaaiconsult\.co\.uk/,
+  ],
 })
