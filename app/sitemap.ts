@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 const BASE_URL = 'https://anaaiconsult.co.uk'
 
 export default function sitemap(): MetadataRoute.Sitemap {

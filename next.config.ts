@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  output: 'export',
+  turbopack: {},
+};
 
 export default withSentryConfig(nextConfig, {
   silent: true,
